@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Report Form Fill</title>
+    <style>
+      /* CSS styling for the form */
+      .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+      }
+      .form-group input[type="file"] {
+        padding: 5px 0;
+      }
+      .submit-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Health Report Form Fill</h2>
+      <form
+        id="myForm"
+        action="your-server-side-script"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight:</label>
+          <input type="text" id="weight" name="weight" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="health-report">Upload Health Report:</label>
+          <input type="file" id="health-report" name="health-report" required />
+        </div>
+        <div class="form-group">
+          <input type="submit" class="submit-btn" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // JavaScript code to handle form submission
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // You can perform additional validation or processing here before submitting the form to the server
+
+        // Submit the form to the server
+        form.submit();
+      });
+    </script>
+  </body>
+</html>
